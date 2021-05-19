@@ -1,15 +1,15 @@
 ext {
     android = [
-            compileSdkVersion    : 30,
-            buildToolsVersion    : "28.0.3",
-            minSdkVersion        : 19,
-            targetSdkVersion     : 30,
-            versionCode          : 1,
-            versionName          : "1.0.0"
+            compileSdkVersion: 30,
+            buildToolsVersion: "28.0.3",
+            minSdkVersion    : 19,
+            targetSdkVersion : 30,
+            versionCode      : 1,
+            versionName      : "1.0.0"
     ]
 
     version = [
-            supportLibraryVersion: "28.0.0",
+            supportLibraryVersion: "1.2.0",
             smartrefreshVersion  : "1.1.0-alpha-21",
             okhttpVersion        : "3.9.0",
             retrofitVersion      : "2.3.0",
@@ -18,29 +18,29 @@ ext {
 
     dependencies = [
             // base
-            "appcompat-v7"                 : "com.android.support:appcompat-v7:${version["supportLibraryVersion"]}",
-            "cardview-v7"                  : "com.android.support:cardview-v7:${version["supportLibraryVersion"]}",
-            "support-v4"                   : "com.android.support:support-v4:${version["supportLibraryVersion"]}",
-            "design"                       : "com.android.support:design:${version["supportLibraryVersion"]}",
-            "constraint-layout"            : "com.android.support.constraint:constraint-layout:1.0.2",
+            "appcompat"          : "androidx.appcompat:appcompat:1.2.0",
+            "material"           : "com.google.android.material:material:1.2.1",
+            "constraint-layout"  : "com.android.support.constraint:constraint-layout:1.0.2",
+            "navigation-fragment": "androidx.navigation:navigation-fragment:2.3.0",
+            "navigation-ui"      : "androidx.navigation:navigation-ui:2.3.0",
 
 //            // ui
-            "SmartRefreshLayout"           : "com.scwang.smartrefresh:SmartRefreshLayout:${version["smartrefreshVersion"]}",
-            "SmartRefreshHeader"           : "com.scwang.smartrefresh:SmartRefreshHeader:${version["smartrefreshVersion"]}",
-            "banner"                       : "com.youth.banner:banner:1.4.10",
+            "SmartRefreshLayout" : "com.scwang.smartrefresh:SmartRefreshLayout:${version["smartrefreshVersion"]}",
+            "SmartRefreshHeader" : "com.scwang.smartrefresh:SmartRefreshHeader:${version["smartrefreshVersion"]}",
+            "banner"             : "com.youth.banner:banner:1.4.10",
 //            "FlycoTabLayout_Lib"           : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
 //            "VerticalTabLayout"            : "q.rorbin:VerticalTabLayout:1.2.5",
 //            "flowlayout-lib"               : "com.hyman:flowlayout-lib:1.1.2",
-            "agentweb"                     : "com.just.agentweb:agentweb:4.0.2",
+            "agentweb"           : "com.just.agentweb:agentweb:4.0.2",
 
             // net
-            "gson"                         : "com.google.code.gson:gson:2.8.2",
-            "okhttp"                       : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
-            "logging-interceptor"          : "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
-            "retrofit"                     : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
-            "converter-gson"               : "com.squareup.retrofit2:converter-gson:${version["retrofitVersion"]}",
-            "adapter-rxjava2"              : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitVersion"]}",
-            "glide"                        : "com.github.bumptech.glide:glide:${version["glideVersion"]}"
+            "gson"               : "com.google.code.gson:gson:2.8.2",
+            "okhttp"             : "com.squareup.okhttp3:okhttp:${version["okhttpVersion"]}",
+            "logging-interceptor": "com.squareup.okhttp3:logging-interceptor:${version["okhttpVersion"]}",
+            "retrofit"           : "com.squareup.retrofit2:retrofit:${version["retrofitVersion"]}",
+            "converter-gson"     : "com.squareup.retrofit2:converter-gson:${version["retrofitVersion"]}",
+            "adapter-rxjava2"    : "com.squareup.retrofit2:adapter-rxjava2:${version["retrofitVersion"]}",
+            "glide"              : "com.github.bumptech.glide:glide:${version["glideVersion"]}"
 //            "retrofit-url-manager"         : "me.jessyan:retrofit-url-manager:1.4.0",
 //
             // dao
