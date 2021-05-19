@@ -8,13 +8,9 @@
 
 ## 页面展示Gif
 
-
-
 ## APK下载地址
 
-
 ## WanAndroid开放API
-
 
 ## 使用到的第三方库
 
@@ -29,3 +25,10 @@
 - X5WebView
 
 ## 项目地址
+
+## 日志
+
+### 2021.5.19
+>> API OkHttp Retrofit Room LiveData 搭建
+
+
