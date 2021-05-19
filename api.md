@@ -2,7 +2,7 @@
 
 ## 1.首页相关
 ### 1.1 首页文章列表
->>https://www.wanandroid.com/article/list/0/json
+>> https://www.wanandroid.com/article/list/0/json
 方法：GET
 参数：页码，拼接在连接中，从0开始。
 
