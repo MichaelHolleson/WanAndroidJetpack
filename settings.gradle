@@ -1,2 +1,3 @@
 rootProject.name = "WanAndroidJetpack"
 include ':app'
+include ':network'
