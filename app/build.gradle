@@ -40,8 +40,6 @@ def apiFileDependencies = rootProject.ext.apiFileDependencies
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    implementation project(":network")
-
     apiFileDependencies.each { k, v -> api files(v)}
     implementationDependencies.each { k, v -> implementation v }
     processors.each { k, v -> annotationProcessor v }

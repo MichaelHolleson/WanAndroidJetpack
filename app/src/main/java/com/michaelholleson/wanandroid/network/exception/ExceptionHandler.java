@@ -1,4 +1,4 @@
-package com.michaelholleson.network.exception;
+package com.michaelholleson.wanandroid.network.exception;
 
 import com.google.gson.JsonParseException;
 
@@ -33,24 +33,15 @@ public class ExceptionHandler {
 
     public static ApiException handleException(Throwable e) {
         ApiException ex;
-        if (e instanceof JsonParseException
-                || e instanceof JSONException
-                || e instanceof ParseException) {
-            //解析错误
+        if (e instanceof JsonParseException || e instanceof JSONException || e instanceof ParseException) {
             ex = new ApiException(PARSE_ERROR, e.getMessage());
-            return ex;
         } else if (e instanceof ConnectException) {
-            //网络错误
             ex = new ApiException(NETWORK_ERROR, e.getMessage());
-            return ex;
         } else if (e instanceof UnknownHostException || e instanceof SocketTimeoutException) {
-            //连接错误
             ex = new ApiException(NETWORK_ERROR, e.getMessage());
-            return ex;
         } else {
-            //未知错误
             ex = new ApiException(UNKNOWN, e.getMessage());
-            return ex;
         }
+        return ex;
     }
 }

@@ -1,6 +1,6 @@
-package com.michaelholleson.network.reponse;
+package com.michaelholleson.wanandroid.network.reponse;
 
-public class BaseResponse<T> {
+public class Response<T> {
 
     public String errorMsg;
 

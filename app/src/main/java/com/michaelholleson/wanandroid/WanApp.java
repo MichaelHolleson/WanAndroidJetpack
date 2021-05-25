@@ -1,6 +1,6 @@
 package com.michaelholleson.wanandroid;
 
-import com.michaelholleson.network.NetworkManager;
+import com.michaelholleson.wanandroid.network.NetworkManager;
 import com.michaelholleson.wanandroid.base.BaseApp;
 import com.michaelholleson.wanandroid.network.ApiService;
 

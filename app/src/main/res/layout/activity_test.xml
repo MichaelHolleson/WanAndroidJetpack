@@ -5,24 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_network"
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="网络测试"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        />
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试网络"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_rxjava"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试rxjava"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="这是一段测试文本"
-        app:layout_constraintTop_toBottomOf="@id/btn_network"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
         app:layout_constraintLeft_toLeftOf="parent"
-
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

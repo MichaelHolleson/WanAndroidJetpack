@@ -1,6 +1,6 @@
-package com.michaelholleson.network;
+package com.michaelholleson.wanandroid.network;
 
-import android.util.Log;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -26,13 +26,23 @@ public class NetworkManager {
     }
 
     public void init(String host) {
+        initOkHttpClient();
+        initRetrofit(host);
+    }
+
+    private void initOkHttpClient() {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
 
         mOkHttpClient = new OkHttpClient.Builder()
+                .connectTimeout(3, TimeUnit.SECONDS)
+                .readTimeout(15, TimeUnit.SECONDS)
+                .writeTimeout(15, TimeUnit.SECONDS)
                 .addNetworkInterceptor(httpLoggingInterceptor)
                 .build();
+    }
 
+    private void initRetrofit(String host) {
         mRetrofit = new Retrofit.Builder()
                 .client(mOkHttpClient)
                 .baseUrl(host)
@@ -41,8 +51,7 @@ public class NetworkManager {
                 .build();
     }
 
-    public Retrofit getRetrofit() {
-        return mRetrofit;
+    public <T> T create(Class<T> tClass) {
+        return mRetrofit.create(tClass);
     }
-
 }

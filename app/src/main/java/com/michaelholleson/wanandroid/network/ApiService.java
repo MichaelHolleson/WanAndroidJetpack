@@ -1,6 +1,7 @@
 package com.michaelholleson.wanandroid.network;
 
 import com.michaelholleson.wanandroid.bean.Banner;
+import com.michaelholleson.wanandroid.network.reponse.Response;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public interface ApiService {
     String HOST = "https://www.wanandroid.com";
 
     @GET("/banner/json")
-    Observable<List<Banner>> getBanner();
+    Observable<Response<List<Banner>>> getBanner();
 
 
 
